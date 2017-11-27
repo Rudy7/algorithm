@@ -5,15 +5,10 @@ import java.util.Scanner;
 public class Calc {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		String[] arr = new String[8];
-		arr[0] = "+";
-		arr[1] = "-";
-		arr[2] = "*";
-		arr[3] = "/";
-		arr[4] = "%";
-		arr[5] = "첫번째 숫자를 입력하세요.";
-		arr[6] = "두번째 숫자를 입력하세요.";
-		arr[7] = "더하기는+, 빼기는-, 곱하기는*, 나누기(몫)은/, 나누기(나머지)는% 입력하세요.";
+		String[] arr = {"+","-","*","/","%"
+		,"첫번째 숫자를 입력하세요."
+		,"두번째 숫자를 입력하세요."
+		,"더하기는+, 빼기는-, 곱하기는*, 나누기(몫)은/, 나누기(나머지)는% 입력하세요."};
 		int num1 = 0, num2 = 0, result = 0;
 		String opcode = "";
 		System.out.print(arr[5]);

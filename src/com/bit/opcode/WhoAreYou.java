@@ -5,13 +5,12 @@ import java.util.Scanner;
 public class WhoAreYou {
 	public static void main(String[] args) { 
 		Scanner s = new Scanner(System.in);
-		String[] arr = new String[2];
-		arr[0] = "당신의 이름은 무엇인가요?";
-		arr[1] = String.format("아하 당신이 %s님 이군요.", "name");
 		String name = "";
+		String[] arr = {"당신의 이름은 무엇인가요?",
+						"아하 당신이 %s님 이군요."};
 		System.out.print(arr[0]);
 		name  = s.next();
-		System.out.printf(arr[1]);
+		System.out.printf(arr[1],name);
 		
 //		Scanner s = new Scanner(System.in);
 //		String name = "";

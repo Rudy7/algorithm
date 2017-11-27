@@ -3,18 +3,12 @@ import java.util.Scanner;
 public class CalcSwitch {
 	public static void main(String[] args){
 	Scanner s = new Scanner(System.in);
-	String[] arr = new String[8];
-	arr[0] = "+";
-	arr[1] = "-";
-	arr[2] = "*";
-	arr[3] = "/";
-	arr[4] = "%";
-	arr[5] = "첫 번째 숫자를 입력하세요.";
-	arr[6] = "사칙 연산 + , - , * , / 중 원하는 연산을 입력하세요";
-	arr[7] = "두 번째 숫자를 입력하세요.";
+	String[] arr = {"+","-","*","/","%"
+	               ,"첫 번째 숫자를 입력하세요."
+	               ,"사칙 연산 + , - , * , / 중 원하는 연산을 입력하세요"
+	   	           ,"두 번째 숫자를 입력하세요."};
 	int num1 = 0, num2 = 0, result = 0;
-	String opcode = "", test = "";
-	boolean inputOK = true;
+	String opcode = "";
 	System.out.print(arr[5]);
 	num1 = s.nextInt();	
 	System.out.print(arr[6]);
@@ -22,24 +16,24 @@ public class CalcSwitch {
 	System.out.print(arr[7]);
 	num2 = s.nextInt();
 	switch(opcode){
-		case "arr[0]":
+		case "+":
 			result = num1 + num2;
 			break;
-		case "arr[1]":
+		case "-":
 			result = num1 - num2;
 			break;
-		case "arr[2]":
+		case "*":
 			result = num1 * num2;
 			break;
-		case "arr[3]":
+		case "/":
 			result = num1 / num2;
 			break;
-		case "arr[4]":
+		case "%":
 			result = num1 % num2;
 			break;
-		default:
-			inputOK = false;
 		}
+		System.out.printf("%d %s %d = %d", num1, opcode, num2, result);
+
 	}
 }
 
